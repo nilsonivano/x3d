@@ -6,6 +6,9 @@ Template.x3d.helpers({
   boxes() {
     return Boxes.find()
   },
+  boxesCount() {
+    return Boxes.find().count();
+  }
 });
 
 Template.x3d.events({

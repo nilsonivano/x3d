@@ -1,0 +1,24 @@
+<template name="x3d">
+  <x3d>
+    <scene>
+      <navigationinfo type="turntable"></navigationinfo>
+      <shape>
+        <appearance>
+          <material diffuseColor="0 1 1"></material>
+        </appearance>
+        <plane size="20 20"></plane>
+      </shape>
+      {{#each box in boxes}}
+        <transform translation="{{box.x}} {{box.y}} {{box.z}}">
+          <shape id="{{box._id}}">
+            <appearance>
+              <material diffuseColor="{{box.color}}">
+              </material>
+            </appearance>
+            <box size="1 1 1"></box>
+          </shape>
+        </transform>
+      {{/each}}
+    </scene>
+  </x3d>
+</template>
